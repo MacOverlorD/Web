@@ -36,3 +36,10 @@ window.onscroll = function() {
 backToTopBtn.onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+const nav = document.querySelector('nav');
+
+mobileMenuIcon.addEventListener('click', () => {
+    nav.classList.toggle('show-nav');
+});
