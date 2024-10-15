@@ -556,3 +556,61 @@ span{
 .back-to-top-btn:hover {
     background-color: #555;
 }
+
+/* For screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    header nav {
+        display: none; /* Hide the navbar by default */
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Show the hamburger icon on mobile */
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+/* Show the navigation when the mobile menu icon is clicked */
+.show-nav {
+    display: block;
+}
+
+/* Hide the hamburger menu icon on larger screens */
+.mobile-menu-icon {
+    display: none;
+}
+
+/* For smaller screens, show the hamburger menu icon */
+@media only screen and (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+    }
+
+    nav {
+        display: none; /* Hide the navbar by default */
+    }
+    
+    .show-nav {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
