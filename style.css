@@ -570,13 +570,6 @@ span{
     background-color: #555;
 }
 
-/* Navigation bar for larger screens */
-header nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-}
-
 header nav a {
     font-size: 18px;
     color: white;
@@ -591,6 +584,7 @@ header nav a.active {
 
 /* Default hidden state for navigation on mobile */
 nav {
+    transition: all 0.3s ease-in-out;
     display: flex;
     justify-content: flex-end;
     gap: 20px;
@@ -636,4 +630,8 @@ nav {
         font-size: 30px;
         cursor: pointer;
     }
+}
+
+.mobile-menu-icon {
+    display: none; /* Hide on larger screens */
 }
