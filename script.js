@@ -1,3 +1,4 @@
+// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -7,6 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Typing effect
 const typingText = document.querySelector('.typing-text');
 const textToType = "I'm a KMUTT Student.";
 let i = 0;
@@ -23,6 +25,7 @@ window.onload = () => {
     typeEffect();
 };
 
+// Back-to-top button
 const backToTopBtn = document.getElementById('backToTopBtn');
 
 window.onscroll = function() {
@@ -37,18 +40,18 @@ backToTopBtn.onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
+// Mobile navigation menu toggle
 const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
 const nav = document.querySelector('nav');
 const navLinks = document.querySelectorAll('nav a');
 
-// Toggle the active class on the nav when the mobile icon is clicked
 mobileMenuIcon.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
 
-// Remove the active class from nav when a link is clicked
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
+        // Close the menu when a link is clicked
         nav.classList.remove('active');
     });
 });
