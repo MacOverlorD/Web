@@ -589,22 +589,28 @@ header nav a.active {
     color: #ff9800;
 }
 
-/* Mobile view: hide the navigation and show the hamburger menu */
+/* Default hidden state for navigation on mobile */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
 @media only screen and (max-width: 768px) {
-    header nav {
-        display: none; /* Hide navigation by default on mobile */
-        flex-direction: column;
-        background-color: #333;
+    nav {
+        display: none; /* Hidden by default */
         position: absolute;
-        top: 60px; /* Below the header */
+        top: 60px;
         right: 0;
         width: 100%;
-        z-index: 100;
+        background-color: #333;
         text-align: center;
+        flex-direction: column;
     }
 
-    header nav.show-nav {
-        display: block; /* Show the navigation when the class is toggled */
+    /* Show navigation when .active class is added */
+    nav.active {
+        display: flex;
     }
 
     nav a {
@@ -621,7 +627,7 @@ header nav a.active {
         background-color: #555;
     }
 
-    /* Hamburger icon for mobile */
+    /* Mobile hamburger icon */
     .mobile-menu-icon {
         display: block;
         position: absolute;
