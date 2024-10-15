@@ -41,5 +41,5 @@ const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
 const nav = document.querySelector('nav');
 
 mobileMenuIcon.addEventListener('click', () => {
-    nav.classList.toggle('show-nav');
+    nav.classList.toggle('active'); 
 });
